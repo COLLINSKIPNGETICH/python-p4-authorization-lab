@@ -18,6 +18,18 @@ db.init_app(app)
 
 api = Api(app)
 
+users = [
+    {'id': 1, 'username': 'user1'},
+    {'id': 2, 'username': 'user2'},
+    {'id': 3, 'username': 'user3'}
+]
+
+# Dummy article data with is_member_only attribute
+articles = [
+    {'id': 1, 'title': 'Article 1', 'is_member_only': True},
+    {'id': 2, 'title': 'Article 2', 'is_member_only': False},
+    {'id': 3, 'title': 'Article 3', 'is_member_only': True}
+]
 class ClearSession(Resource):
 
     def delete(self):
